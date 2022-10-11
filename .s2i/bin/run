@@ -16,7 +16,7 @@ run_default(){
 run_seldon(){
     echo "---> Confiuring Seldon"
 
-    MODEL_NAME="${MODEL_NAME:-YOLOv7}"
+    MODEL_NAME="${MODEL_NAME:-Model}"
     API_TYPE="${API_TYPE:-REST}"
     SERVICE_TYPE="${SERVICE_TYPE:-MODEL}"
     PERSISTENCE="${PERSISTENCE:-0}"

@@ -9,8 +9,9 @@ download_model(){
     echo TO: data/${MODEL_NAME}
 
     mkdir -p data/
-    curl ${MODEL_URL} > data/${MODEL_NAME}
-    mv data/ /tmp/src/data
+
+    curl -sL ${MODEL_URL} > data/${MODEL_NAME}
+    [ -d /tmp/src ] && mv data/ /tmp/src/data
 }
 
 download_model
