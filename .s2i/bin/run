@@ -36,3 +36,4 @@ run_seldon(){
 
 # run_default
 run_seldon
+run_null
