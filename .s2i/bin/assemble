@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # insert secret code sause for OS based depends
-curl ${MODEL_URL} > ${MODEL_NAME}
-mv ${MODEL_NAME} /tmp/src
+mkdir -p data/
+curl ${MODEL_URL} > data/${MODEL_NAME}
+mv data/ /tmp/src/data
 
 ${STI_SCRIPTS_PATH}/assemble

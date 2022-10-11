@@ -9,7 +9,7 @@ class Main:
         self.model_name = "Main"
 
         # load the model from disk
-        self.model = pickle.load(open(model_name, "rb"))
+        self.model = pickle.load(open("data/" + model_name, "rb"))
 
     def predict(self, X, features_names):
         df = pd.DataFrame(data=X, columns=features_names)

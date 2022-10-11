@@ -1,7 +1,7 @@
 # this file allows you to set environment vars via source to image
 
 MODEL_URL=https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt
-MODEL_NAME=yolov7
+MODEL_NAME=model
 API_TYPE=REST
 SERVICE_TYPE=MODEL
 PERSISTENCE=0
