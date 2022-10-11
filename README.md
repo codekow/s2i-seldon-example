@@ -9,7 +9,7 @@ python -m venv venv
 pip install -U pip
 pip install -r requirements.txt
 
-.s2i/bin/run
+bash .s2i/bin/run
 ```
 
 ## Dumped Links
