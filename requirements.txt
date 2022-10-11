@@ -1,7 +1,5 @@
 pandas
-#seldon-core==1.7.0
-seldon-core==1.13.1
-scikit-learn==1.0.2
+seldon-core
+scikit-learn
 numpy
-pickle-mixin
-werkzeug==2.0.3
+torch

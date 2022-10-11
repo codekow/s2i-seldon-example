@@ -1,15 +1,15 @@
 import os
 import pandas as pd
-import pickle
+import torch
 
-model_file = "data/" + os.environ.get('MODEL_NAME', 'model')
+model_name = os.environ.get('MODEL_NAME', 'model')
 
 class Main:
     def __init__(self):
         self.model_name = "Main"
 
         # load the model from disk
-        self.model = pickle.load(open(model_file, "rb"))
+        self.model = torch.load(open( "data/" + model_name ))
 
     def predict(self, X, features_names):
         df = pd.DataFrame(data=X, columns=features_names)
