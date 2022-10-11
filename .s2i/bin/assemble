@@ -2,5 +2,6 @@
 
 # insert secret code sause for OS based depends
 curl ${MODEL_URL} > ${MODEL_NAME}
+mv ${MODEL_NAME} /tmp/src
 
 ${STI_SCRIPTS_PATH}/assemble
