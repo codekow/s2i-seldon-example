@@ -30,7 +30,8 @@ run_seldon(){
 
     echo "---> Starting Seldon"
 
-    exec seldon-core-microservice $MODEL_NAME --service-type $SERVICE_TYPE --persistence $PERSISTENCE
+    # exec seldon-core-microservice ${MODEL_NAME} --service-type ${SERVICE_TYPE} --persistence ${PERSISTENCE}
+    exec seldon-core-microservice Main --service-type ${SERVICE_TYPE} --persistence ${PERSISTENCE}
 }
 
 # run_default

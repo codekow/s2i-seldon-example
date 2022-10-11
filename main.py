@@ -6,7 +6,7 @@ model_name = os.environ.get('MODEL_NAME', 'model')
 
 class Main:
     def __init__(self):
-        self.model_name = model_name
+        self.model_name = "Main"
 
         # load the model from disk
         self.model = pickle.load(open(self.model_name, "rb"))
