@@ -1,6 +1,17 @@
 # s2i Seldon Example
 YOLOv7 packaged with Seldon Core, for deployment on OpenShift cluster
 
+## Quickstart
+```
+python -m venv venv
+. ./venv/bin/activate
+
+pip install -U pip
+pip install -r requirements.txt
+
+.s2i/bin/run
+```
+
 ## Dumped Links
 
 - https://github.com/carlmes/yolov7_seldon.git
