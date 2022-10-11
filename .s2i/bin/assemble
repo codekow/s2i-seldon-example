@@ -1,8 +1,18 @@
 #!/bin/bash
 
 # insert secret code sause for OS based depends
-mkdir -p data/
-curl ${MODEL_URL} > data/${MODEL_NAME}
-mv data/ /tmp/src/data
+
+download_model(){
+    echo "Downloading model..."
+
+    echo FROM: ${MODEL_URL}
+    echo TO: data/${MODEL_NAME}
+
+    mkdir -p data/
+    curl ${MODEL_URL} > data/${MODEL_NAME}
+    mv data/ /tmp/src/data
+}
+
+download_model
 
 ${STI_SCRIPTS_PATH}/assemble
