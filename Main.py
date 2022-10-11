@@ -4,12 +4,15 @@ import torch
 
 model_name = os.environ.get('MODEL_NAME', 'model')
 
+import sys
+sys.path.insert(0, './data')
+
 class Main:
     def __init__(self):
         self.model_name = "Main"
 
         # load the model from disk
-        self.model = torch.load(open( "data/" + model_name ))
+        self.model = torch.load( "data/" + model_name )
 
     def predict(self, X, features_names):
         df = pd.DataFrame(data=X, columns=features_names)
