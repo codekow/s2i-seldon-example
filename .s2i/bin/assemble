@@ -2,18 +2,27 @@
 
 # insert secret code sause for OS based depends
 
-download_model(){
+download_yolov7(){
     echo "Downloading model..."
 
-    echo FROM: ${MODEL_URL}
-    echo TO: data/${MODEL_NAME}
+    MODEL_URL=https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt
+    MODEL_SRC=https://github.com/WongKinYiu/yolov7/archive/refs/tags/v0.1.tar.gz
+
+    echo MODEL_URL: ${MODEL_URL}
+    echo MODEL_SRC: ${MODEL_SRC}
 
     mkdir -p data/
 
+    # download torch model
     curl -sL ${MODEL_URL} > data/${MODEL_NAME}
     [ -d /tmp/src ] && mv data/ /tmp/src/data
+
+    # torch model needs the same directory structure
+    # from when it was saved
+    curl -sL ${MODEL_SRC} | tar zxf -
+    mv models utils /tmp/src/
 }
 
-download_model
+download_yolov7
 
 ${STI_SCRIPTS_PATH}/assemble

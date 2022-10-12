@@ -14,7 +14,7 @@ run_default(){
 }
 
 run_seldon(){
-    echo "---> Confiuring Seldon"
+    echo "---> Configuring Seldon"
 
     MODEL_NAME="${MODEL_NAME:-Model}"
     API_TYPE="${API_TYPE:-REST}"
@@ -30,8 +30,7 @@ run_seldon(){
 
     echo "---> Starting Seldon"
 
-    # exec seldon-core-microservice ${MODEL_NAME} --service-type ${SERVICE_TYPE} --persistence ${PERSISTENCE}
-    exec seldon-core-microservice Main --service-type ${SERVICE_TYPE} --persistence ${PERSISTENCE}
+    exec seldon-core-microservice ${MODEL_NAME} --service-type ${SERVICE_TYPE} --persistence ${PERSISTENCE}
 }
 
 # run_default

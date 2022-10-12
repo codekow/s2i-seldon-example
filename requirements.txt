@@ -3,3 +3,8 @@ seldon-core
 scikit-learn
 numpy
 torch
+torchvision
+opencv-python
+tqdm
+matplotlib
+seaborn
