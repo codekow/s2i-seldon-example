@@ -20,6 +20,7 @@ download_yolov7(){
     # torch model needs the same directory structure
     # from when it was saved
     curl -sL ${MODEL_SRC} | tar zxf - --strip-components=1
+    ls -l
     mv models utils /tmp/src/
 }
 
