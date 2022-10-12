@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import torch
 
-model_name = os.environ.get("MODEL_NAME", "model")
+model_name = os.environ.get("MODEL_NAME", "Main")
 
 import sys
 

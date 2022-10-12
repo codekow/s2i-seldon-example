@@ -16,7 +16,7 @@ run_default(){
 run_seldon(){
     echo "---> Configuring Seldon"
 
-    MODEL_NAME="${MODEL_NAME:-Model}"
+    MODEL_NAME="${MODEL_NAME:-Main}"
     API_TYPE="${API_TYPE:-REST}"
     SERVICE_TYPE="${SERVICE_TYPE:-MODEL}"
     PERSISTENCE="${PERSISTENCE:-0}"
