@@ -11,17 +11,14 @@ download_yolov7(){
     echo MODEL_URL: ${MODEL_URL}
     echo MODEL_SRC: ${MODEL_SRC}
 
-    mkdir -p data/
-
     # download torch model
+    [ -d data ] || mkdir -p data
     curl -sL ${MODEL_URL} > data/${MODEL_NAME}
-    [ -d /tmp/src ] && mv data/ /tmp/src/data
 
-    # torch model needs the same directory structure
-    # from when it was saved
+    # torch model needs the same directory structure to load correctly
+    # https://github.com/pytorch/pytorch/issues/18325
     curl -sL ${MODEL_SRC} | tar zxf - --strip-components=1
-    ls -l
-    mv models utils /tmp/src/
+    
 }
 
 download_yolov7
