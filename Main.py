@@ -12,6 +12,7 @@ class Main:
         self.model_name = "Main"
 
         print("**** Calling init ****")
+        print(f"**** Loading model = {model_name} ****")
         # load the model from disk
         # self.model = torch.load( "data/" + model_name )
 
